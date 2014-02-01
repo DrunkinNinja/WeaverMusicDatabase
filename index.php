@@ -70,6 +70,7 @@ else {
                 <tr>
                     <th>Name</th>
                     <th>Music ID</th>
+                    <th>Location</th>
                     <th>Genre</th>
                     <th>Arranger/Composer</th>
                     <th>Publisher</th>
@@ -84,6 +85,7 @@ else {
 			<tr>
             	<td><?=$row['Name']?></td>
                 <td><?=$row['musicid']?></td>
+                <td><?=$row['location']?></td>
                 <td><?=$row['genre']?></td>
                 <td><?=$row['arranger/composer']?></td>
                 <td><?=$row['publisher']?></td>                
