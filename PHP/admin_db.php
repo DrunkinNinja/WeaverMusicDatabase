@@ -76,6 +76,7 @@ require("templateTop.php");
                     <th>Publisher</th>
                     <th>Arranger</th>
                     <th>Composer</th>
+                    <th>Grade</th>
                 </tr>
 </thead>
             <tbody>
@@ -83,7 +84,6 @@ require("templateTop.php");
 	$result = $mysqli->query($squery);
 	while($row = $result -> fetch_assoc()) {
 		?>
-        	<? ++$rowCount ?>
 			<tr>
             	<td><?=$row['Name']?></td>
                 <td><?=$row['musicid']?></td>
