@@ -7,11 +7,8 @@
 <script src="JS/pager.js"></script>
 <script src="JS/colorbox/jquery.colorbox-min.js"></script>
 <link rel="stylesheet" href="CSS/pure.css" />
-<<<<<<< HEAD
 <link rel="stylesheet" href="CSS/pure-weaver.css" />
 <link rel="stylesheet" href="CSS/font.css" />
-=======
->>>>>>> 20cb82f28c6d29a4ce27e4661eedcb8136128303
 </head>
 <?  
 require("everypage.php");
@@ -23,13 +20,8 @@ else {
 }
  
 ?>
-<<<<<<< HEAD
 <body class="pure-skin-weaver" style="margin-left:20px; margin-top:20px; background-image:url('images/gradient.png'); background-repeat:repeat-x; color: #f4b8c0">
     <h1 style="color: #d90000; font-family: 'musicos-variant-comicsregular'; font-size: 45px">Weaver High Music Database</h1>
-=======
-<body style="margin-left:20px; margin-top:20px">
-    <h1>Weaver High Music Database</h1>
->>>>>>> 20cb82f28c6d29a4ce27e4661eedcb8136128303
         <hr>
         <form action="" method="Post" class="pure-form">
         	<fieldset>
@@ -47,23 +39,6 @@ else {
             	<input type="submit" value="Search" class="pure-button">
     		</fieldset>
         </form>
-
-        <form action="" method="post" class="pure-form">
-            <fieldset>        
-                <label for="sort">Sort By:</label>
-                    <select name="sort">
-                        <option value="Name">Name</option>
-                        <option value="musicid">Music ID</option>
-                        <option value="genre">Genre</option>
-                        <option value="publisher">Publisher</option>
-                        <option value="arranger/composer">Arranger/Composer</option>
-                        <option value="grade">Grade</option>
-                    </select>
-                    
-                    <button class="pure-button" value="Refresh" onClick="window.location.reload()">Refresh</button>
-            </fieldset>
-        </form>
-            
         <?
 			$search = $_POST['search'];
 			$scat = $_POST['scat'];
@@ -93,7 +68,6 @@ else {
 	while($row = $result -> fetch_assoc()) {
 		?>
 			<tr>
-<<<<<<< HEAD
             	<td><?php echo $row['Name']?></td>
                 <td><?php echo $row['musicid']?></td>
                 <td><?php echo $row['location']?></td>
@@ -101,15 +75,6 @@ else {
                 <td><?php echo $row['arranger/composer']?></td>
                 <td><?php echo $row['publisher']?></td>                
                 <td><?php echo $row['grade']?></td>
-=======
-            	<td><?=$row['Name']?></td>
-                <td><?=$row['musicid']?></td>
-                <td><?=$row['location']?></td>
-                <td><?=$row['genre']?></td>
-                <td><?=$row['arranger/composer']?></td>
-                <td><?=$row['publisher']?></td>                
-                <td><?=$row['grade']?></td>
->>>>>>> 20cb82f28c6d29a4ce27e4661eedcb8136128303
             </tr>
         <?	
 	}
