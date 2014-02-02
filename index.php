@@ -20,7 +20,7 @@ else {
 }
  
 ?>
-<body class="pure-skin-weaver" style="margin-left:20px; margin-top:20px; background-image:url('images/gradient.png'); background-repeat:repeat-x; color: #f4b8c0">
+<body class="pure-skin-weaver" style="margin-left:20px; margin-top:20px; background-image:url('images/gradient.png'); background-repeat:repeat-x; color: #FFFFFF">
     <h1 style="color: #d90000; font-family: 'musicos-variant-comicsregular'; font-size: 45px">Weaver High Music Database</h1>
         <hr>
         <form action="" method="Post" class="pure-form">
