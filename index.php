@@ -6,6 +6,7 @@
 <script src="JS/jquery.js"></script>
 <script src="JS/pager.js"></script>
 <script src="JS/colorbox/jquery.colorbox-min.js"></script>
+<link rel="icon" type="image/ico" href="images/favicon.ico"/>
 <link rel="stylesheet" href="CSS/pure.css" />
 <link rel="stylesheet" href="CSS/pure-weaver.css" />
 <link rel="stylesheet" href="CSS/font.css" />
