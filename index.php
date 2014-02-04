@@ -14,14 +14,14 @@
 <?  
 require("everypage.php");
 if (!$_POST['sort']){
-	$sort = "Name";
+	$sort = "musicid";
 }
 else {
 	$sort = $_POST['sort'];
 }
  
 ?>
-<body class="pure-skin-weaver" style="margin-left:20px; margin-top:20px; background-image:url('images/gradient.png'); background-repeat:repeat-x; color: #FFFFFF">
+<body class="pure-skin-weaver" style="letter-spacing:1.5px; margin-left:20px; margin-top:20px; background-image:url('images/gradient.png'); background-repeat:repeat-x; color: #FFFFFF">
     <h1 style="color: #d90000; font-family: 'musicos-variant-comicsregular'; font-size: 50px">Weaver High Music Database</h1>
         <form action="" method="Post" class="pure-form">
         	<fieldset>
@@ -45,7 +45,7 @@ else {
                 <label for="sort">Sort By:</label>
                     <select name="sort">
                         <option value="Name">Name</option>
-                        <option value="musicid">Music ID</option>
+                        <option selected value="musicid">Music ID</option>
                         <option value="genre">Genre</option>
                         <option value="publisher">Publisher</option>
                         <option value="arranger/composer">Arranger/Composer</option>
@@ -69,13 +69,13 @@ else {
         <table class="pure-table pure-table-striped" style="float:left" id="user">
         	<thead>
                 <tr>
-                    <th>Name</th>
                     <th>Music ID</th>
-                    <th>Location</th>
-                    <th>Genre</th>
+                    <th>Name</th>
                     <th>Arranger/Composer</th>
                     <th>Publisher</th>
+                    <th>Genre</th>
                     <th>Grade</th>
+                    <th>Music Link</th>
                 </tr>
 </thead>
             <tbody>
@@ -84,13 +84,21 @@ else {
 	while($row = $result -> fetch_assoc()) {
 		?>
 			<tr>
-            	<td><?php echo $row['Name']?></td>
                 <td><?php echo $row['musicid']?></td>
-                <td><?php echo $row['location']?></td>
-                <td><?php echo $row['genre']?></td>
+            	<td><?php echo $row['Name']?></td>
                 <td><?php echo $row['arranger/composer']?></td>
-                <td><?php echo $row['publisher']?></td>                
+                <td><?php echo $row['publisher']?></td> 
+                <td><?php echo $row['genre']?></td>
                 <td><?php echo $row['grade']?></td>
+                <?          
+                    if($row['hassound'] == 1){
+                        echo "<td><a href=music/".$row['musicid'].".mp3>mp3</a></td>";
+                    }
+                    else{
+                        echo "<td>Not Available</td>";                
+                    }
+
+                ?>
             </tr>
         <?	
 	}
@@ -99,7 +107,7 @@ else {
 <br>
 
 <script>
-	$('#user').oneSimpleTablePagination({});
+	$('#user').oneSimpleTablePagination({rowsPerPage: 15});
 </script>
 </div>
 </body>
